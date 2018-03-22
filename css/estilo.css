@@ -1,5 +1,3 @@
-/*Sandra, Leo, Miguel*/
-
 html{
     box-sizing:border-box
 }
@@ -36,11 +34,11 @@ a:active,a:hover{outline-width:0}
 abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
 
 aside{
-  text-align: justify;
+    text-align: justify;
 }
 
 footer{
-  text-align: center;
+    text-align: center;
 }
 
 
@@ -62,11 +60,11 @@ div.contenedor{
 }
 
 div .menubar{
- width: 12%;
- float:left;
- position: -webkit-sticky;
- position: sticky;
- top: 0;
+    width: 12%;
+    float:left;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 .principal{width: 53%; display: inline-block; margin:0 auto;}
 .branding{width: 30%; float: right;}
@@ -75,19 +73,19 @@ div .menubar{
 .padding-menu{padding:10px; display:table;}
 
 .clearfix{
-	overflow: auto;
-	float: right;
+    overflow: auto;
+    float: right;
 }
 
 .ads {
-	width: 100%;
-	height: auto;
+    width: 100%;
+    height: auto;
 
 }
 
 .imgads {
-	width:100%;
-	height:auto;
+    width:100%;
+    height:auto;
 }
 
 .div-logo{
@@ -107,16 +105,14 @@ div .menubar{
     animation-duration: 7s;
     animation-iteration-count: infinite;
 }
-@keyframes opam {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
-}
+
 @-webkit-keyframes opam {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
+    0%   {transform: rotate(0deg);}
+    25%  {transform: rotate(-30deg);}
+    50%  {transform: rotate(30deg);}
+    75%  {transform: rotate(-30deg);}
+    100% {transform: rotate(0deg);}
 }
-
-
 
 .img-premio{
     height: 75px;
@@ -140,7 +136,7 @@ div .menubar{
     text-align: justify;
 }
 .titulo-centrado{
-  text-align: center;
+    text-align: center;
 }
 
 
@@ -183,4 +179,40 @@ td {
     padding: 8px;
     text-align:center;
     font-family: Optima;  
+}
+
+.principal .branding{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+@media(min-width: 1366px){
+    .branding{
+        visibility: visible;
+    }
+
+    .f2{
+        padding: 0;
+        display: none;
+        visibility: collapse;
+    }
+}
+
+@media(max-width: 1365px){
+    .branding{
+        visibility: hidden;
+    }
+
+    .f2{
+        padding: 25px;
+        display: table;
+        margin: 0 auto;
+        visibility: visible;
+    }
+}
+
+@media(max-width: 767px){
+    
 }
