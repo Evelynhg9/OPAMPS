@@ -1,10 +1,8 @@
-/*Sandra y Evelyn */
-
 html{
-    box-sizing:border-box
+    box-sizing:border-box;
 }
 *,*:before,*:after{
-    box-sizing:inherit
+    box-sizing:inherit;
 }
 .clearfix:before, .clearfix:after{content:'';display:table}
 .clearfix:after{clear:both;}
@@ -36,11 +34,11 @@ a:active,a:hover{outline-width:0}
 abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
 
 aside{
-  text-align: justify;
+    text-align: justify;
 }
 
 footer{
-  text-align: center;
+    text-align: center;
 }
 
 
@@ -57,37 +55,37 @@ footer{
 
 div.contenedor{
     margin: 20px auto 30px auto;
-    width: 960PX;
+    width: auto;
     padding: 50px;
 }
 
-div .menubar{
- width: 12%;
- float:left;
- position: -webkit-sticky;
- position: sticky;
- top: 0;
+div.menubar{
+    width: 12%;
+    float:left;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 .principal{width: 53%; display: inline-block; margin:0 auto;}
-.branding{width: 30%; float: right;}
+.branding{width: 30%; float: right; align-items: center;}
 
 .padding-brand{padding:25px; display:table;}
 .padding-menu{padding:10px; display:table;}
 
 .clearfix{
-	overflow: auto;
-	float: right;
+    overflow: auto;
+    float: right;
 }
 
 .ads {
-	width: 100%;
-	height: auto;
+    width: 100%;
+    height: auto;
 
 }
 
 .imgads {
-	width:100%;
-	height:auto;
+    width:100%;
+    height:auto;
 }
 
 .div-logo{
@@ -107,16 +105,14 @@ div .menubar{
     animation-duration: 7s;
     animation-iteration-count: infinite;
 }
-@keyframes opam {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
-}
+
 @-webkit-keyframes opam {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
+    0%   {transform: rotate(0deg);}
+    25%  {transform: rotate(-30deg);}
+    50%  {transform: rotate(30deg);}
+    75%  {transform: rotate(-30deg);}
+    100% {transform: rotate(0deg);}
 }
-
-
 
 .img-premio{
     height: 75px;
@@ -140,7 +136,7 @@ div .menubar{
     text-align: justify;
 }
 .titulo-centrado{
-  text-align: center;
+    text-align: center;
 }
 
 
@@ -173,7 +169,6 @@ li a:hover:not(.inicio) {
     color:#32325A;
 }
 
-
 table {
     border-collapse: collapse;
     width: 100%;
@@ -183,4 +178,76 @@ td {
     padding: 8px;
     text-align:center;
     font-family: Optima;  
+}
+
+.principal .branding{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+/*Superior a 1023 PC*/
+@media(min-width: 1024px){
+    .branding{
+        display: block;
+    }
+
+    .f2{
+        padding: 0;
+        display: none;
+        visibility: collapse;
+    }
+
+}
+
+/*Desde 768-1023 Tablets*/
+@media(max-width: 1023px){
+    .branding{
+        display: none;
+    }
+
+    .f2{
+        padding: 25px;
+        display: table;
+        margin: 0 auto;
+        visibility: visible;
+    }
+
+    div.menubar{
+        float: right;
+        width: 20%;
+    }
+
+    .principal{
+        width: 70%;
+    }
+
+}
+
+/*Desde 0-767 Smartphones*/
+@media(max-width: 767px){
+    
+    a{font-size: 12px;}
+    
+    #Nominaciones{
+        overflow: scroll;
+    }
+}
+
+/*Medidas para dispositivos ultra pequeños*/
+@media(max-width: 425px){
+    
+    .logo-p{
+        float: none;
+        height: 60px;
+        width: 60px;            
+    }
+    
+    .gif-fechaHora{
+        float: none;
+    }
+    
+    h2{font-size: 15px}
+    h3{font-size: 15px}
 }
